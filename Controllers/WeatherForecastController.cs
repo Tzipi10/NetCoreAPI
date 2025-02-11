@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using MyApi.Models;
 
 namespace MyApi.Controllers;
 
@@ -11,22 +12,44 @@ public class WeatherForecastController : ControllerBase
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-    private readonly ILogger<WeatherForecastController> _logger;
+    private readonly List<WeatherForecast> arr;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public WeatherForecastController()
     {
-        _logger = logger;
-    }
-
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
-    {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        arr = Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
             Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
             TemperatureC = Random.Shared.Next(-20, 55),
             Summary = Summaries[Random.Shared.Next(Summaries.Length)]
         })
-        .ToArray();
+        .ToList();
+    }
+
+    [HttpGet(Name = "GetWeatherForecast")]
+    public IEnumerable<WeatherForecast> Get()
+    {
+        return arr;
+    }
+
+    [HttpGet("{id}")]
+    public ActionResult<WeatherForecast> Get(int id)
+    {
+        if (id < 0 || id >= arr.Count)
+            return BadRequest();
+        return arr[id];
+    }
+
+    [HttpPost]
+    public void Post(WeatherForecast newW)
+    {
+        arr.Add(newW);
+    }
+
+    [HttpPut("{id}")]
+    public void Put(int id, WeatherForecast newW)
+    {
+        if (id < 0 || id >= arr.Count)
+            return;
+        arr[id] = newW;
     }
 }

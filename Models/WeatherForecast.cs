@@ -1,4 +1,4 @@
-namespace MyApi;
+namespace MyApi.Models;
 
 public class WeatherForecast
 {
