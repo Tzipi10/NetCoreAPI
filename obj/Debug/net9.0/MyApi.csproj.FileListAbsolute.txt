@@ -31,3 +31,40 @@ Z:\B\קניג מלכה\core\MyApi\obj\Debug\net9.0\refint\MyApi.dll
 Z:\B\קניג מלכה\core\MyApi\obj\Debug\net9.0\MyApi.pdb
 Z:\B\קניג מלכה\core\MyApi\obj\Debug\net9.0\MyApi.genruntimeconfig.cache
 Z:\B\קניג מלכה\core\MyApi\obj\Debug\net9.0\ref\MyApi.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\appsettings.Development.json
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\appsettings.json
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\MyApi.staticwebassets.endpoints.json
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\MyApi.exe
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\MyApi.deps.json
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\MyApi.runtimeconfig.json
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\MyApi.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\MyApi.pdb
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Microsoft.OpenApi.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyApi.csproj.AssemblyReference.cache
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyApi.GeneratedMSBuildEditorConfig.editorconfig
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyApi.AssemblyInfoInputs.cache
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyApi.AssemblyInfo.cs
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyApi.csproj.CoreCompileInputs.cache
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyApi.MvcApplicationPartsAssemblyInfo.cs
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyApi.MvcApplicationPartsAssemblyInfo.cache
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyApi.sourcelink.json
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\scopedcss\bundle\MyApi.styles.css
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\staticwebassets.build.json
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\staticwebassets.development.json
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\staticwebassets\msbuild.MyApi.Microsoft.AspNetCore.StaticWebAssets.props
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\staticwebassets\msbuild.MyApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\staticwebassets\msbuild.build.MyApi.props
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.MyApi.props
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.MyApi.props
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\staticwebassets.pack.json
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyApi.csproj.Up2Date
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyApi.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\refint\MyApi.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyApi.pdb
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyApi.genruntimeconfig.cache
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\ref\MyApi.dll

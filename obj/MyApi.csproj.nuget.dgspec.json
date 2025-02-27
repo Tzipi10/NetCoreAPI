@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\B\\קניג מלכה\\core\\MyApi\\MyApi.csproj": {}
+    "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\MyApi.csproj": {}
   },
   "projects": {
-    "Z:\\B\\קניג מלכה\\core\\MyApi\\MyApi.csproj": {
+    "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\MyApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\B\\קניג מלכה\\core\\MyApi\\MyApi.csproj",
+        "projectUniqueName": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\MyApi.csproj",
         "projectName": "MyApi",
-        "projectPath": "Z:\\B\\קניג מלכה\\core\\MyApi\\MyApi.csproj",
+        "projectPath": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\MyApi.csproj",
         "packagesPath": "C:\\Users\\huser\\.nuget\\packages\\",
-        "outputPath": "Z:\\B\\קניג מלכה\\core\\MyApi\\obj\\",
+        "outputPath": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -54,6 +54,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[7.3.0, )"
             }
           },
           "imports": [

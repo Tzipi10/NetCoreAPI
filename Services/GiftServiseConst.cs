@@ -1,15 +1,12 @@
-using Microsoft.AspNetCore.Mvc;
 using MyApi.Models;
+using MyApi.Interfaces;
 
 namespace MyApi.Services;
-
-[ApiController]
-[Route("[controller]")]
-public static class GiftService
+public class GiftServiceConst: IGiftService
 {
-    private static List<Gift> list;
+    private List<Gift> list;
 
-    static GiftService()
+    public GiftServiceConst()
     {
         list = new List<Gift>
         {
@@ -17,16 +14,16 @@ public static class GiftService
             new Gift {Id = 2, Name = "ornaments",Price = 400,Summary = "Decoration shelf"}
         };
     }
-    public static List<Gift> Get()
+    public List<Gift> Get()
     {
         return list;
     }
 
-    public static Gift Get(int id)
+    public Gift Get(int id)
     {
         return list.FirstOrDefault(g => g.Id == id);
     }
-    public static int Insert(Gift newGift)
+    public int Insert(Gift newGift)
     {
         if(newGift == null 
             || string.IsNullOrEmpty(newGift.Name)
@@ -38,7 +35,7 @@ public static class GiftService
         return newGift.Id;
     }
 
-    public static bool Update(int id, Gift newGift)
+    public bool Update(int id, Gift newGift)
     {
         if(newGift == null 
             || string.IsNullOrEmpty(newGift.Name)
@@ -49,10 +46,10 @@ public static class GiftService
         var gift = list.FirstOrDefault(g => g.Id == id);
         gift.Name = newGift.Name;
         gift.Price = newGift.Price;
-        gift.Summary = gift.Summary;
+        gift.Summary = newGift.Summary;
         return true;
     }
-    public static bool Delete(int id)
+    public bool Delete(int id)
     {
         var gift = list.FirstOrDefault(g => g.Id == id);
         if(gift == null)
@@ -61,5 +58,13 @@ public static class GiftService
         list.RemoveAt(list.IndexOf(gift));
 
         return true;
+    }
+}
+
+public static class GiftUtilities
+{
+    public static void AddGiftConst(this IServiceCollection services)
+    {
+        services.AddSingleton<IGiftService,GiftServiceConst>();
     }
 }
