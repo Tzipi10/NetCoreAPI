@@ -1,4 +1,5 @@
 using Microsoft.OpenApi.Models;
+using MyApi.Middlewares;
 using MyApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,8 +25,10 @@ if (app.Environment.IsDevelopment())
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
         c.RoutePrefix = string.Empty; // קבעי את Swagger UI בשורש האפליקציה
     });
+   
 }
-
+app.UseMyLog();
+app.UseMyErrorMiddleware();
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
