@@ -6,7 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // הוספת שירותי ה-Controllers
 builder.Services.AddControllers();
-builder.Services.AddGiftConst();
+builder.Services.AddGiftJson();
+builder.Services.AddUserJson();
 
 // הוספת Swagger
 builder.Services.AddSwaggerGen(c =>
@@ -20,16 +21,24 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-        c.RoutePrefix = string.Empty; // קבעי את Swagger UI בשורש האפליקציה
-    });
-   
+    // app.UseSwaggerUI(c =>
+    // {
+    //     c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+    //     c.RoutePrefix = string.Empty; // קבעי את Swagger UI בשורש האפליקציה
+    // });
+    app.UseSwaggerUI();
+    
 }
+
 app.UseMyLog();
 app.UseMyErrorMiddleware();
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
+/*js*/
+app.UseDefaultFiles();
+app.UseStaticFiles();
+/*js (remove "launchUrl" from Properties\launchSettings.json*/
+
+//app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 

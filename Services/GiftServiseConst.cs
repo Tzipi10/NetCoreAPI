@@ -61,10 +61,10 @@ public class GiftServiceConst: IGiftService
     }
 }
 
-public static class GiftUtilities
-{
-    public static void AddGiftConst(this IServiceCollection services)
-    {
-        services.AddSingleton<IGiftService,GiftServiceConst>();
-    }
-}
+// public static class GiftUtilities
+// {
+//     public static void AddGiftConst(this IServiceCollection services)
+//     {
+//         services.AddSingleton<IGiftService,GiftServiceConst>();
+//     }
+// }

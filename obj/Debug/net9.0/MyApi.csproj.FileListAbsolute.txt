@@ -68,3 +68,9 @@ Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\ref
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyApi.pdb
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyApi.genruntimeconfig.cache
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\ref\MyApi.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\MyApi.staticwebassets.runtime.json
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\zpzzhjq3ov-zoxlk5se5i.gz
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\zonpmqdv09-68ni3mmab4.gz
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\wtexwk2c07-9dcoh3bzc2.gz
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Data\gift.json
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Data\user.json

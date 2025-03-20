@@ -32,11 +32,11 @@ public class MyErrorMiddleware
                 //c.Response.StatusCode = 500;
                 // קוד לשליחת המייל
                 //לא באמת עובד...
-                MailMessage mail = new MailMessage("kenig99380@gmail.com", "kenig99380@gmail.com", $"תקלה בשרת {e.Message}", "פנה לתמיכה התכנית");
+                MailMessage mail = new MailMessage("malki566588@gmail.com", "malki566588@gmail.com", $"תקלה בשרת {e.Message}", "פנה לתמיכה התכנית");
 
                 using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
                 {
-                    smtp.Credentials = new NetworkCredential("kenig99380@gmail.com", "");
+                    smtp.Credentials = new NetworkCredential("malki566588.com", "");
                     smtp.EnableSsl = true;
 
                     Console.WriteLine("before send mail");

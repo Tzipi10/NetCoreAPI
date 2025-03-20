@@ -1,12 +1,1042 @@
 {
   "Version": 1,
-  "Hash": "9V8YSZJM2Gp4K+sIx5uciaa0+0Zsn+G50ZBYvSQesE8=",
+  "Hash": "Du0J4g1vJ72c9e6Pq0c4LEGzdSWILmfS2X/wYpO7rYg=",
   "Source": "MyApi",
   "BasePath": "_content/MyApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "MyApi\\wwwroot",
+      "Source": "MyApi",
+      "ContentRoot": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\",
+      "BasePath": "_content/MyApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\wtexwk2c07-9dcoh3bzc2.gz",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "js/site#[.{fingerprint=9dcoh3bzc2}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\js\\site.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "hm4p5limbi",
+      "Integrity": "qRy9lG5Xi4glSqCWCdEZogSB6VX1ij+hTaz7KJGcrec=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\zonpmqdv09-68ni3mmab4.gz",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "index#[.{fingerprint=68ni3mmab4}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\index.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "dc13e8lkfj",
+      "Integrity": "jWfyimf1s40CLGaiG0XjO9KFBqs71Jl6/yemTi/EUj0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\index.html"
+    },
+    {
+      "Identity": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\zpzzhjq3ov-zoxlk5se5i.gz",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "css/site#[.{fingerprint=zoxlk5se5i}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\css\\site.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "6iwh808co5",
+      "Integrity": "MrkGjfJbtiTQKCqzljej72Njbw6vWKiTb/Xs3LUMWco=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\css\\site.css",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zoxlk5se5i",
+      "Integrity": "06WPOIW5/mIO+16lWWyaJd8OL4taYJX8l7d24pTFPC4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\index.html",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "68ni3mmab4",
+      "Integrity": "6t5WAmsZI5eNbU7ihkoUqZf7aUjFMO4XtCzst7oeiDw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\js\\site.js",
+      "SourceId": "MyApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\",
+      "BasePath": "_content/MyApi",
+      "RelativePath": "js/site#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9dcoh3bzc2",
+      "Integrity": "nWEh2f28aMcAA8zcMUPXKDZLxqeaKKhtebLCp30ffhg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "css/site.css",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\zpzzhjq3ov-zoxlk5se5i.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004651162791"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "214"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MrkGjfJbtiTQKCqzljej72Njbw6vWKiTb/Xs3LUMWco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 18 Oct 2021 21:58:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"06WPOIW5/mIO+16lWWyaJd8OL4taYJX8l7d24pTFPC4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-06WPOIW5/mIO+16lWWyaJd8OL4taYJX8l7d24pTFPC4="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"06WPOIW5/mIO+16lWWyaJd8OL4taYJX8l7d24pTFPC4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 18 Oct 2021 21:58:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-06WPOIW5/mIO+16lWWyaJd8OL4taYJX8l7d24pTFPC4="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\zpzzhjq3ov-zoxlk5se5i.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "214"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MrkGjfJbtiTQKCqzljej72Njbw6vWKiTb/Xs3LUMWco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 18 Oct 2021 21:58:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MrkGjfJbtiTQKCqzljej72Njbw6vWKiTb/Xs3LUMWco="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.zoxlk5se5i.css",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\zpzzhjq3ov-zoxlk5se5i.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004651162791"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "214"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MrkGjfJbtiTQKCqzljej72Njbw6vWKiTb/Xs3LUMWco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 18 Oct 2021 21:58:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"06WPOIW5/mIO+16lWWyaJd8OL4taYJX8l7d24pTFPC4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zoxlk5se5i"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-06WPOIW5/mIO+16lWWyaJd8OL4taYJX8l7d24pTFPC4="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.zoxlk5se5i.css",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "332"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"06WPOIW5/mIO+16lWWyaJd8OL4taYJX8l7d24pTFPC4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 18 Oct 2021 21:58:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zoxlk5se5i"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-06WPOIW5/mIO+16lWWyaJd8OL4taYJX8l7d24pTFPC4="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.zoxlk5se5i.css.gz",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\zpzzhjq3ov-zoxlk5se5i.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "214"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MrkGjfJbtiTQKCqzljej72Njbw6vWKiTb/Xs3LUMWco=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 18 Oct 2021 21:58:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zoxlk5se5i"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MrkGjfJbtiTQKCqzljej72Njbw6vWKiTb/Xs3LUMWco="
+        }
+      ]
+    },
+    {
+      "Route": "index.68ni3mmab4.html",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\zonpmqdv09-68ni3mmab4.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001818181818"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "549"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jWfyimf1s40CLGaiG0XjO9KFBqs71Jl6/yemTi/EUj0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 19:07:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"6t5WAmsZI5eNbU7ihkoUqZf7aUjFMO4XtCzst7oeiDw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "68ni3mmab4"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6t5WAmsZI5eNbU7ihkoUqZf7aUjFMO4XtCzst7oeiDw="
+        }
+      ]
+    },
+    {
+      "Route": "index.68ni3mmab4.html",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1415"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6t5WAmsZI5eNbU7ihkoUqZf7aUjFMO4XtCzst7oeiDw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 19:07:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "68ni3mmab4"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6t5WAmsZI5eNbU7ihkoUqZf7aUjFMO4XtCzst7oeiDw="
+        }
+      ]
+    },
+    {
+      "Route": "index.68ni3mmab4.html.gz",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\zonpmqdv09-68ni3mmab4.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "549"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jWfyimf1s40CLGaiG0XjO9KFBqs71Jl6/yemTi/EUj0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 19:07:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "68ni3mmab4"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jWfyimf1s40CLGaiG0XjO9KFBqs71Jl6/yemTi/EUj0="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\zonpmqdv09-68ni3mmab4.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001818181818"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "549"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jWfyimf1s40CLGaiG0XjO9KFBqs71Jl6/yemTi/EUj0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 19:07:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"6t5WAmsZI5eNbU7ihkoUqZf7aUjFMO4XtCzst7oeiDw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6t5WAmsZI5eNbU7ihkoUqZf7aUjFMO4XtCzst7oeiDw="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1415"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6t5WAmsZI5eNbU7ihkoUqZf7aUjFMO4XtCzst7oeiDw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 19:07:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6t5WAmsZI5eNbU7ihkoUqZf7aUjFMO4XtCzst7oeiDw="
+        }
+      ]
+    },
+    {
+      "Route": "index.html.gz",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\zonpmqdv09-68ni3mmab4.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "549"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jWfyimf1s40CLGaiG0XjO9KFBqs71Jl6/yemTi/EUj0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 19:07:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jWfyimf1s40CLGaiG0XjO9KFBqs71Jl6/yemTi/EUj0="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.9dcoh3bzc2.js",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\wtexwk2c07-9dcoh3bzc2.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000887311446"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1126"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qRy9lG5Xi4glSqCWCdEZogSB6VX1ij+hTaz7KJGcrec=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 19:09:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"nWEh2f28aMcAA8zcMUPXKDZLxqeaKKhtebLCp30ffhg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9dcoh3bzc2"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nWEh2f28aMcAA8zcMUPXKDZLxqeaKKhtebLCp30ffhg="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.9dcoh3bzc2.js",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4302"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nWEh2f28aMcAA8zcMUPXKDZLxqeaKKhtebLCp30ffhg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 19:09:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9dcoh3bzc2"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nWEh2f28aMcAA8zcMUPXKDZLxqeaKKhtebLCp30ffhg="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.9dcoh3bzc2.js.gz",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\wtexwk2c07-9dcoh3bzc2.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1126"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qRy9lG5Xi4glSqCWCdEZogSB6VX1ij+hTaz7KJGcrec=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 19:09:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9dcoh3bzc2"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qRy9lG5Xi4glSqCWCdEZogSB6VX1ij+hTaz7KJGcrec="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\wtexwk2c07-9dcoh3bzc2.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000887311446"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1126"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qRy9lG5Xi4glSqCWCdEZogSB6VX1ij+hTaz7KJGcrec=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 19:09:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"nWEh2f28aMcAA8zcMUPXKDZLxqeaKKhtebLCp30ffhg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nWEh2f28aMcAA8zcMUPXKDZLxqeaKKhtebLCp30ffhg="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4302"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nWEh2f28aMcAA8zcMUPXKDZLxqeaKKhtebLCp30ffhg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 19:09:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nWEh2f28aMcAA8zcMUPXKDZLxqeaKKhtebLCp30ffhg="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js.gz",
+      "AssetFile": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\Debug\\net9.0\\compressed\\wtexwk2c07-9dcoh3bzc2.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1126"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qRy9lG5Xi4glSqCWCdEZogSB6VX1ij+hTaz7KJGcrec=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 18 Mar 2025 19:09:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qRy9lG5Xi4glSqCWCdEZogSB6VX1ij+hTaz7KJGcrec="
+        }
+      ]
+    }
+  ]
 }
