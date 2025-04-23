@@ -1,18 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using MyApi.Models;
 
-namespace MyApi.Interfaces;
-
-public interface IGiftService
+namespace MyApi.Interfaces
 {
-    List<Gift> Get();
-    Gift Get(int id);
-
-    int Insert(Gift newGift);
-
-
-    bool Update(int id, Gift newGift);
-    
-    bool Delete(int id);
-    
+    public interface IGiftService : IService<Gift>
+    {
+    }
 }

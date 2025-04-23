@@ -74,3 +74,11 @@ Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\com
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\wtexwk2c07-9dcoh3bzc2.gz
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Data\gift.json
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Data\user.json
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll

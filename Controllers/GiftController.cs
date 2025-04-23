@@ -1,56 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
 using MyApi.Models;
 using MyApi.Interfaces;
-namespace MyApi.Controllers;
 
-[ApiController]
-[Route("[controller]")]
-public class GiftController : ControllerBase
+namespace MyApi.Controllers
 {
-    private IGiftService GiftService;
-    public GiftController(IGiftService GiftService){
-        this.GiftService = GiftService;
-    }
-
-    [HttpGet]
-    public ActionResult<IEnumerable<Gift>> Get()
+    [Route("gift")]
+    public class GiftController : GenericController<Gift>
     {
-        return GiftService.Get();
+        public GiftController(IGiftService giftService) : base(giftService)
+        {
+        }
     }
-
-    [HttpGet("{id}")]
-    public ActionResult<Gift> Get(int id)
-    {
-        var gift = GiftService.Get(id);
-        if (gift == null)
-            return NotFound();
-        return gift;
-    }
-
-    [HttpPost]
-    public ActionResult Post(Gift newGift)
-    {
-        var newId = GiftService.Insert(newGift);
-        if (newId == -1)
-            return BadRequest();
-        return CreatedAtAction(nameof(Post), new { Id= newId});
-    }
-
-    [HttpPut("{id}")]
-    public ActionResult Put(int id, Gift newGift)
-    {
-        if(GiftService.Update(id,newGift))
-            return NoContent();
-
-        return BadRequest();
-    }
-
-    [HttpDelete("{id}")]
-    public ActionResult Delete(int id)
-    {
-        if (GiftService.Delete(id))
-            return Ok();
-            
-        return NotFound();
-    }   
 }

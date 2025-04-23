@@ -1,1 +1,1 @@
-[{ "Id": 1, "Name": "jewelry", "Price": 500, "Summary": "jewelryset" }, { "Id": 2, "Name": "ornaments", "Price": 400, "Summary": "Decoration shelf" }, { "Id": 3, "Name": "dfg", "Price": 100, "Summary": "dfgf" }]
+[{"Id":1,"Name":"jewelry","UserId":1,"Price":500,"Summary":"jewelryset"},{"Id":2,"Name":"ornaments","UserId":1,"Price":400,"Summary":"Decoration shelf"},{"Id":3,"Name":"dfg","UserId":1,"Price":100,"Summary":"dfgf"}]

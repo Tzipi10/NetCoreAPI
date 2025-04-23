@@ -27,7 +27,8 @@ public class GiftServiceConst: IGiftService
     {
         if(newGift == null 
             || string.IsNullOrEmpty(newGift.Name)
-            || newGift.Price <= 0)
+            || newGift.Price <= 0
+            || newGift.UserId <0)
             return -1;
         
         newGift.Id = list.Max(g => g.Id) +1;
@@ -40,12 +41,14 @@ public class GiftServiceConst: IGiftService
         if(newGift == null 
             || string.IsNullOrEmpty(newGift.Name)
             || newGift.Price <= 0
+            || newGift.UserId <0
             || newGift.Id != id)
             return false;
         
         var gift = list.FirstOrDefault(g => g.Id == id);
         gift.Name = newGift.Name;
         gift.Price = newGift.Price;
+        gift.UserId = newGift.UserId;
         gift.Summary = newGift.Summary;
         return true;
     }
