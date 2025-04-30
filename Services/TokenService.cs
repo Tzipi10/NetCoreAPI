@@ -17,7 +17,7 @@ public static class TokenService
         = new SymmetricSecurityKey(
             Encoding.UTF8.GetBytes(
                 "SXkSqsKyNUyvGbnHs7ke2NCq8zQzNLW7mPmHbnZZ"));
-    private static string issuer = "https://gifts-demo.com";
+    private static string issuer = "https://gift-demo.com";
     public static SecurityToken GetToken(List<Claim> claims) =>
         new JwtSecurityToken(
             issuer,
@@ -36,6 +36,9 @@ public static class TokenService
             IssuerSigningKey = key,
             ClockSkew = TimeSpan.Zero // remove delay of token when expire
         };
+
+
+
 
     public static string WriteToken(SecurityToken token) =>
         new JwtSecurityTokenHandler().WriteToken(token);

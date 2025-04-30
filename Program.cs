@@ -3,6 +3,8 @@ using Microsoft.OpenApi.Models;
 using MyApi.Middlewares;
 using MyApi.Services;
 
+//התקנת תעודת אבטחה dotnet dev-certs https --trust
+
 var builder = WebApplication.CreateBuilder(args);
 
 // הוספת שירותי ה-Controllers
@@ -20,7 +22,7 @@ builder.Services.AddAuthorization(cfg =>
     cfg.AddPolicy("Admin",
         policy => policy.RequireClaim("type","Admin"));
     cfg.AddPolicy("User",
-        policy => policy.RequireClaim("type","Admin","User"));
+        policy => policy.RequireClaim("type","User","Admin"));
 });
 builder.Services.AddControllers();
 builder.Services.AddGiftJson();
