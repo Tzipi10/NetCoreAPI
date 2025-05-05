@@ -2,15 +2,18 @@ using Microsoft.AspNetCore.Mvc;
 using MyApi.Models;
 using MyApi.Interfaces;
 using Microsoft.AspNetCore.Authorization;
+using MyApi.Services;
 namespace MyApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]
 public class UserController : ControllerBase
 {
+    CurrentUserService currentUser;
     private IUserService UserService;
     public UserController(IUserService UserService){
         this.UserService = UserService;
+
     }
 
     [HttpGet]
@@ -23,9 +26,11 @@ public class UserController : ControllerBase
 
     [HttpGet("{id}")]
     [Authorize(Policy = "User")]
-
     public ActionResult<User> Get(int id)
     {
+        
+        if(id!=currentUser.UserId && User.FindFirst("type")?.Value != "Admin")
+            return Unauthorized();
         var user = UserService.Get(id);
         if (user == null)
             return NotFound();
@@ -44,6 +49,8 @@ public class UserController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [Authorize(Policy = "User")]
+
     public ActionResult Put(int id, User newUser)
     {
         if(UserService.Update(id,newUser))
@@ -61,5 +68,14 @@ public class UserController : ControllerBase
             return Ok();
             
         return NotFound();
-    }   
+    } 
+
+
+    [HttpPost("updateUserId")]
+        public IActionResult UpdateUserId([FromBody] int userId)
+        {
+            currentUser.UpdateUserId(userId);
+            Console.WriteLine("---------------"+currentUser.UserId);
+            return Ok();
+        }  
 }

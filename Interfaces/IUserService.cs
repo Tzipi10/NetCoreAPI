@@ -5,5 +5,6 @@ namespace MyApi.Interfaces
 {
     public interface IUserService : IService<User>
     {
+        int ExistUserId(string name,string password);
     }
 }

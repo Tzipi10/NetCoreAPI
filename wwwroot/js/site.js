@@ -1,6 +1,37 @@
 const uri = '/gift';
 let gifts = [];
 
+if(localStorage.getItem("token") == null){
+    window.location.href = "./login.html";
+}
+else{
+    // const payload = JSON.parse(atob(token.split('.')[1]));
+    // const role=payload["type"]
+    // if(role=="admin")
+    // {
+    //     const usersPageLink=document.getElementById('users');
+    //     usersPageLink.style.display = 'block';
+    // }
+    updateUserId(123); 
+}
+
+async function updateUserId(userId) {
+    const response = await fetch("/User/updateUserId", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(userId)
+    });
+
+    if (response.ok) {
+        console.log("UserId updated successfully");
+    } else {
+        console.error("Failed to update UserId");
+    }
+}
+
+
+
+
 function getItems() {
     fetch(uri)
         .then(response => response.json())
@@ -136,4 +167,9 @@ function _displayItems(data) {
     });
 
     gifts = data;
+}
+
+const logout=()=>{
+    localStorage.removeItem("token");
+    window.location.href="./index.html";
 }

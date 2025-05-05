@@ -16,6 +16,7 @@ List<User> Users{get;}
 
 private static string fileName = "user.json";
 private string filePath;
+CurrentUserService currentUser;
 public UserServiceJson(IHostEnvironment env)
 {
     filePath = Path.Combine(env.ContentRootPath,"Data",fileName);
@@ -37,14 +38,15 @@ public List<User> Get() => Users;
 
 public User Get(int id)
 {
+    // if(id!= currentUser.UserId )
+    //     return null;
     return Users.FirstOrDefault(u => u.Id == id);
 }
 public int Insert(User newUser)
 {
     if(newUser == null 
         || string.IsNullOrEmpty(newUser.Name)
-        || string.IsNullOrEmpty(newUser.Password)
-        || newUser.PermissionLevel <=0 || newUser.PermissionLevel >2)
+        || string.IsNullOrEmpty(newUser.Password))
         return -1;
     
     newUser.Id = Users.Max(u => u.Id) +1;
@@ -58,14 +60,12 @@ public bool Update(int id, User newUser)
     if(newUser == null 
         || string.IsNullOrEmpty(newUser.Name)
         || string.IsNullOrEmpty(newUser.Password)
-        || newUser.PermissionLevel <=0 || newUser.PermissionLevel >2
         || newUser.Id != id)
         return false;
     
     var user = Users.FirstOrDefault(u => u.Id == id);
     user.Name = newUser.Name;
     user.Password = newUser.Password;
-    user.PermissionLevel = newUser.PermissionLevel;
     savaToFile();
     return true;
 }
@@ -76,10 +76,19 @@ public bool Delete(int id)
         return false;
     
     Users.RemoveAt(Users.IndexOf(user));
+    
     savaToFile();
     return true;
 }
+public int ExistUserId(string name,string password){
+    
+    User user = Users.FirstOrDefault(u => u.Name.Equals(name) && u.Password.Equals(password));
+    if(user!= null)
+        return user.Id;
+    return -1;
 }
+}
+
 
 public static class UserUtilities
 {

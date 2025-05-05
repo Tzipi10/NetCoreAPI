@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מערכת לוגין</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <h1>כניסת משתמש</h1>
+    <form id="loginForm">
+        <label for="username">שם משתמש:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">סיסמה:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <input type="submit" value="כניסה">
+    </form>
+    <h2 id="error"></h2>
+    <script src="./js/login.js" asp-append-version="true"></script>
+</body>
+</html>

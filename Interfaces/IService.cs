@@ -9,5 +9,6 @@ namespace MyApi.Interfaces
         int Insert(T newItem);
         bool Update(int id, T newItem);
         bool Delete(int id);
+
     }
 }

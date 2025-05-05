@@ -69,9 +69,6 @@ Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyA
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\MyApi.genruntimeconfig.cache
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\ref\MyApi.dll
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\MyApi.staticwebassets.runtime.json
-Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\zpzzhjq3ov-zoxlk5se5i.gz
-Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\zonpmqdv09-68ni3mmab4.gz
-Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\wtexwk2c07-9dcoh3bzc2.gz
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Data\gift.json
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Data\user.json
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
@@ -81,3 +78,9 @@ Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Mic
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\p4e4wbtxo8-hk68p3e52j.gz
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\57xpf30a7f-s64be4izuz.gz
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\ap4rlv6e9l-dqi6u886bw.gz
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\zpzzhjq3ov-1u382j9kmy.gz
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\zonpmqdv09-j78elwttui.gz
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\wtexwk2c07-cn2pnguc4p.gz

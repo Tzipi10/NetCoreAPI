@@ -35,21 +35,22 @@ public class GiftServiceJson : IGiftService
     }
     public List<Gift> Get()
     {
+        Console.WriteLine(currentUser.UserId);
         return Gifts.FindAll(g => g.UserId == currentUser.UserId);
     }
 
     public Gift Get(int id)
     {
-        return Gifts.FirstOrDefault(g => g.Id == id);
+        return Gifts.FirstOrDefault(g => g.Id == id && g.UserId == currentUser.UserId);
     }
     public int Insert(Gift newGift)
     {
         if (newGift == null
             || string.IsNullOrEmpty(newGift.Name)
-            || newGift.Price <= 0
-            || newGift.UserId < 0)
+            || newGift.Price <= 0)
             return -1;
 
+        newGift.UserId = currentUser.UserId;
         newGift.Id = Gifts.Max(g => g.Id) + 1;
         Gifts.Add(newGift);
         savaToFile();
@@ -62,20 +63,19 @@ public class GiftServiceJson : IGiftService
             || string.IsNullOrEmpty(newGift.Name)
             || newGift.Price <= 0
             || newGift.Id != id
-            || newGift.UserId < 0)
+            || newGift.UserId != currentUser.UserId)
             return false;
 
         var gift = Gifts.FirstOrDefault(g => g.Id == id);
         gift.Name = newGift.Name;
         gift.Price = newGift.Price;
-        gift.UserId = newGift.UserId;
         gift.Summary = newGift.Summary;
         savaToFile();
         return true;
     }
     public bool Delete(int id)
     {
-        var gift = Gifts.FirstOrDefault(g => g.Id == id);
+        var gift = Gifts.FirstOrDefault(g => g.Id == id && g.UserId == currentUser.UserId);
         if (gift == null)
             return false;
 

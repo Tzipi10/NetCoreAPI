@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
       "Id": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -9,8 +13,16 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
+      "Id": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
       "Id": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\wwwroot\\login.html",
+      "PackagePath": "staticwebassets\\login.html"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.MyApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

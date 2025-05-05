@@ -1,25 +1,116 @@
-input[type='submit'],
-button,
-[aria-label] {
+/* site.css */
+
+/* Reset some default styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #faedf2; /* צבע רקע בהיר */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+/* Style for the main header */
+h1 {
+    text-align: center;
+    color: #ea5a7e; /* צבע טקסט ורוד כהה */
+    margin-top: 20px;
+}
+
+/* Style for the forms */
+form {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+/* Input fields styling */
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #f06292; /* גבול ורוד */
+    border-radius: 4px;
+}
+
+/* Submit button styling */
+input[type="submit"] ,#out {
+    background-color: #ea5a7e; /* צבע כפתור ורוד כהה */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-#editForm {
-    display: none;
+input[type="submit"]:hover,#out {
+    background-color: #e84870; /* צבע כפתור ורוד כהה יותר בהעברה */
 }
 
+/* Table styling */
 table {
-    font-family: Arial, sans-serif;
-    border: 1px solid;
+    width: 80%;
     border-collapse: collapse;
+    margin: 20px auto;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #f06292; /* גבול ורוד */
 }
 
 th {
-    background-color: #f8f8f8;
-    padding: 5px;
+    background-color: #ff6b90; /* צבע כותרת ורוד כהה */
+    color: white;
 }
 
-td {
-    border: 1px solid;
-    padding: 5px;
+tbody tr:hover {
+    background-color: #f8bbd0; 
+}
+    
+h3 {
+    color: #d81b60; /* צבע טקסט ורוד כהה */
+    font-size: 1.5em; /* גודל גופן */
+    text-align: center; /* ממרכז את הטקסט */
+    margin-top: 20px; /* רווח מעל הכותרת */
+    margin-bottom: 10px; /* רווח מתחת לכותרת */
+    font-weight: bold; /* טקסט מודגש */
+}
+
+.close-link {
+    color: #dd5a8a; /* צבע טקסט ורוד כהה */
+    font-size: 24px; /* גודל גופן */
+    text-decoration: none; /* ללא קו תחתון */
+    cursor: pointer; /* מצביע יד כאשר מעבירים מעל */
+    transition: color 0.3s; /* אפקט מעבר צבע */
+}
+
+.close-link:hover {
+    color: #c2185b; /* צבע כהה יותר בהעברה */
+}
+
+.gift-image {
+    width: 200px; /* קובע את רוחב התמונה */
+    height: auto; /* שומר על יחס הגובה-רוחב */
+    border: 2px solid #4CAF50; /*מסגרת ירוקה סביב התמונה*/
+    border-radius: 10px; /* פינות מעוגלות */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* צל לתמונה */
+}
+
+#form1{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+#out{
+    width: 120px;
 }
