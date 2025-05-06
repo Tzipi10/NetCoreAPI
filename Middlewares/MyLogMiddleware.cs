@@ -27,5 +27,11 @@ public static class MyLogMiddlewareHelper
     public static void UseMyLog(this IApplicationBuilder application)
     {
         application.UseMiddleware<MyLogMiddleware>();
+
+    }
+    public static void UseTokenMiddleware(this IApplicationBuilder application)
+    {
+        application.UseMiddleware<TokenMiddleware>();
+        
     }
 }

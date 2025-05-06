@@ -1,58 +1,55 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gift CRUD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>users</title>
     <link rel="stylesheet" href="css/site.css" />
 </head>
-
 <body>
-    <h1>Welcome to gift's world!!!</h1>
+    <h1>all users</h1>
     <button onclick="logout()" id="out">Log Out</button>
-    <a href="./users.html" id="usersLink" style="display: none;">Users</a><br>
+    <a href="./index.html" id="giftsLink">Gifts</a><br>
 
     <div id="form1">
         <!-- <div id="showUser"></div> -->
         <div>
-            <h3>Add new gift</h3>
-
+            <h3>Add new user</h3>
             <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+                <input type="text" id="add-id" placeholder="id" required>
                 <input type="text" id="add-name" placeholder="name" required>
-                <input type="text" id="add-price" placeholder="price" required>
-                <input type="text" id="add-summary" placeholder="summary" required>
+                <input type="text" id="add-password" placeholder="password" required>
+                <input type="email" id="add-email" placeholder="email" required>
                 <input type="submit" value="Add">
             </form>
         </div>
         <div id="editForm" style="display: none;">
             <h3>Edit</h3>
-            <form action="javascript:void(0);" onsubmit="updateItem()">
+            <form action="javascript:void(0);" onsubmit="updateItem()" >
                 <input type="hidden" id="edit-id">
                 <input type="text" id="edit-name">
-                <input type="text" id="edit-price">
-                <input type="text" id="edit-summary">
+                <input type="text" id="edit-password">
+                <input type="email" id="edit-email">
                 <input type="submit" value="Save">
                 <a class="close-link" onclick="closeInput()" aria-label="Close">&#10006;</a>
             </form>
         </div>
     </div>
     <p id="counter"></p>
-
+ 
     <table>
         <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Summary</th>
+            <th>name</th>
+            <th>email</th>
             <th></th>
             <th></th>
         </tr>
-        <tbody id="gifts"></tbody>
+        <tbody id="users"></tbody>
     </table>
 
-    <script src="js/site.js" asp-append-version="true"></script>
+    <script src="./js/users.js" asp-append-version="true"></script>
     <script type="text/javascript">
         getItems();
     </script>
 </body>
-
 </html>

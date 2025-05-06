@@ -3,16 +3,13 @@ using MyApi.Models;
 namespace MyApi.Services;
 
 public  class CurrentUserService {
-     public int UserId { get; private set; }
+     public int UserId { get; set; }
 
-        public CurrentUserService() { }
-
-        public void UpdateUserId(int userId)
-        {
-            UserId = userId;
-            Console.WriteLine(userId);
+        public CurrentUserService() { 
+            // UserId = userId;
         }
 
 
 
 }
+

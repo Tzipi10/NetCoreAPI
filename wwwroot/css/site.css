@@ -3,7 +3,7 @@
 /* Reset some default styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
     background-color: #faedf2; /* צבע רקע בהיר */
     color: #333;
     display: flex;
@@ -31,7 +31,7 @@ form {
 }
 
 /* Input fields styling */
-input[type="text"] {
+input[type="text"],input[type="email"],input[type="password"] {
     width: calc(100% - 20px);
     padding: 10px;
     margin: 10px 0;
@@ -40,7 +40,7 @@ input[type="text"] {
 }
 
 /* Submit button styling */
-input[type="submit"] ,#out {
+input[type="submit"] ,#out ,#usersLink, #giftsLink{
     background-color: #ea5a7e; /* צבע כפתור ורוד כהה */
     color: white;
     padding: 10px;
@@ -49,7 +49,7 @@ input[type="submit"] ,#out {
     cursor: pointer;
 }
 
-input[type="submit"]:hover,#out {
+input[type="submit"]:hover,#out,#usersLink ,#giftsLink {
     background-color: #e84870; /* צבע כפתור ורוד כהה יותר בהעברה */
 }
 
@@ -81,7 +81,7 @@ h3 {
     font-size: 1.5em; /* גודל גופן */
     text-align: center; /* ממרכז את הטקסט */
     margin-top: 20px; /* רווח מעל הכותרת */
-    margin-bottom: 10px; /* רווח מתחת לכותרת */
+    margin-bottom: 0px; /* רווח מתחת לכותרת */
     font-weight: bold; /* טקסט מודגש */
 }
 
@@ -113,4 +113,9 @@ h3 {
 
 #out{
     width: 120px;
+}
+
+#usersLink,#giftsLink{
+    margin-top: 20px;
+    text-decoration-line: none;
 }

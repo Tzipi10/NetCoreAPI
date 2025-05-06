@@ -2,16 +2,19 @@
     {
         "Id": 1,
         "Name": "sara",
-        "Password": "afsdafgfd"
+        "Password": "afsdafgfd",
+        "email":"sara@com"
     },
     {
         "Id": 2,
         "Name": "rivka",
-        "Password": "afsafdsagd"
+        "Password": "afsafdsagd",
+        "email":"rivka@com"
     },
     {
         "Id": 123,
         "Name": "MeReTz",
-        "Password": "CLicK"
+        "Password": "CLicK",
+        "email":"MeReTz@CLicK"
     }
 ]

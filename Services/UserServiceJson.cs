@@ -90,10 +90,7 @@ public int ExistUserId(string name,string password){
 }
 
 
-public static class UserUtilities
-{
-public static void AddUserJson(this IServiceCollection services)
-{
-services.AddSingleton<IUserService,UserServiceJson>();
-}
-} 
+// public static class UserUtilities
+// {
+
+// } 

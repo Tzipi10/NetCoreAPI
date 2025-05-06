@@ -16,7 +16,7 @@ public class GiftServiceJson : IGiftService
     CurrentUserService currentUser;
     private static string fileName = "gift.json";
     private string filePath;
-    public GiftServiceJson(IHostEnvironment env)
+    public GiftServiceJson(IHostEnvironment env,CurrentUserService currentUser)
     {
         filePath = Path.Combine(env.ContentRootPath, "Data", fileName);
         using (var jsonFile = File.OpenText(filePath))
@@ -27,6 +27,7 @@ public class GiftServiceJson : IGiftService
                 PropertyNameCaseInsensitive = true
             });
         }
+        this.currentUser = currentUser;
     }
 
     private void savaToFile()
@@ -85,10 +86,7 @@ public class GiftServiceJson : IGiftService
     }
 }
 
-public static class GiftUtilities
-{
-    public static void AddGiftJson(this IServiceCollection services)
-    {
-        services.AddSingleton<IGiftService, GiftServiceJson>();
-    }
-}
+// public static class GiftUtilities
+// {
+    
+// }

@@ -1,47 +1,4 @@
-const uri = '/gift';
-let gifts = [];
-let token;
-
-if(localStorage.getItem("token") == null){
-    window.location.href = "./login.html";
-}
-else{
-    token = localStorage.getItem("token");
-    const payload = JSON.parse(atob(token.split('.')[1]));
-    const role=payload["type"]
-    if(role=="Admin")
-    {
-        const usersPageLink=document.getElementById('usersLink');
-        usersPageLink.style.display = 'block';
-    }
-    console.log("token: "+token);
-    console.log("role: "+role);
-
-    //updateUserId(123); 
-}
-
-// async function updateUserId(userId) {
-//     const response = await fetch("/User/updateUserId", {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(userId)
-//     });
-//     let x = await response.json();
-//     console.log(x);
-//     // if (response.ok) {
-//     //     console.log("UserId updated successfully");
-//     // } else {
-//     //     console.error("Failed to update UserId");
-//     // }
-// }
-
-
-
-
 function getItems() {
-    
     fetch(uri,{
         method: "GET",
         headers: {
@@ -55,14 +12,14 @@ function getItems() {
 
 function addItem() {
     const addNameTextbox = document.getElementById('add-name');
-    const addPriceTextbox = document.getElementById('add-price');
-    const addSummaryTextbox = document.getElementById('add-summary');
+    const addPasswordTextbox = document.getElementById('add-password');
+    const addEmailTextbox = document.getElementById('add-email');
 
 
     const item = {
         name: addNameTextbox.value.trim(),
-        price: addPriceTextbox.value.trim(),
-        summary: addSummaryTextbox.value.trim(),
+        password: addPasswordTextbox.value.trim(),
+        email: addEmailTextbox.value.trim(),
         id: 0
     };
 
@@ -79,8 +36,8 @@ function addItem() {
         .then(() => {
             getItems();
             addNameTextbox.value = '';
-            addPriceTextbox.value = '';
-            addSummaryTextbox.value = '';
+            addPasswordTextbox.value = '';
+            addEmailTextbox.value = '';
         })
         .catch(error => console.error('Unable to add item.', error));
 }
@@ -98,12 +55,12 @@ function deleteItem(id) {
 }
 
 function displayEditForm(id) {
-    const item = gifts.find(item => item.id === id);
+    const item = users.find(item => item.id === id);
 
     document.getElementById('edit-name').value = item.name;
     document.getElementById('edit-id').value = item.id;
-    document.getElementById('edit-price').value = item.price;
-    document.getElementById('edit-summary').value = item.summary;
+    document.getElementById('edit-password').value = item.password;
+    document.getElementById('edit-email').value = item.email;
     document.getElementById('editForm').style.display = 'block';
 }
 
@@ -111,9 +68,9 @@ function updateItem() {
     const itemId = document.getElementById('edit-id').value;
     const item = {
         id: parseInt(itemId, 10),
-        price: document.getElementById('edit-price').value.trim(),
         name: document.getElementById('edit-name').value.trim(),
-        summary: document.getElementById('edit-summary').value.trim()
+        password: document.getElementById('edit-password').value.trim(),
+        email: document.getElementById('edit-email').value.trim()
     };
 
     fetch(`${uri}/${itemId}`, {
@@ -138,13 +95,13 @@ function closeInput() {
 }
 
 function _displayCount(itemCount) {
-    const name = (itemCount === 1) ? 'gift' : 'gift kinds';
+    const name = (itemCount === 1) ? 'user' : 'user kinds';
 
     document.getElementById('counter').innerText = `${itemCount} ${name}`;
 }
 
 function _displayItems(data) {
-    const tBody = document.getElementById('gifts');
+    const tBody = document.getElementById('users');
     tBody.innerHTML = '';
 
     _displayCount(data.length);
@@ -167,24 +124,15 @@ function _displayItems(data) {
         td1.appendChild(textName);
 
         let td2 = tr.insertCell(1);
-        let textPrice = document.createTextNode(item.price);
-        td2.appendChild(textPrice);
+        let textEmail = document.createTextNode(item.email);
+        td2.appendChild(textEmail);
 
-        let td3 = tr.insertCell(2);
-        let textsum = document.createTextNode(item.summary);
-        td3.appendChild(textsum);
-
-        let td4 = tr.insertCell(3);
+        let td4 = tr.insertCell(2);
         td4.appendChild(editButton);
 
-        let td5 = tr.insertCell(4);
+        let td5 = tr.insertCell(3);
         td5.appendChild(deleteButton);
     });
 
-    gifts = data;
-}
-
-const logout=()=>{
-    localStorage.removeItem("token");
-    window.location.href="./index.html";
+    users = data;
 }

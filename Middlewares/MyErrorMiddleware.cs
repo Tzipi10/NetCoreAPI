@@ -27,6 +27,7 @@ public class MyErrorMiddleware
         }
         catch (Exception e)
         {
+            Console.WriteLine(e);
             try
             {
                 //c.Response.StatusCode = 500;

@@ -25,8 +25,10 @@ builder.Services.AddAuthorization(cfg =>
         policy => policy.RequireClaim("type","User","Admin"));
 });
 builder.Services.AddControllers();
+builder.Services.AddCurrentUser();
 builder.Services.AddGiftJson();
 builder.Services.AddUserJson();
+
 
 // הוספת Swagger
 builder.Services.AddSwaggerGen(c =>
@@ -72,6 +74,9 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 /*js (remove "launchUrl" from Properties\launchSettings.json*/
 app.UseRouting();
+
+app.UseTokenMiddleware();
+
 app.UseAuthentication();
 
 //app.UseHttpsRedirection();

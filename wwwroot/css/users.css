@@ -1,0 +1,22 @@
+/* Table styling */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #f06292; /* גבול ורוד */
+}
+
+th {
+    background-color: #ff6b90; /* צבע כותרת ורוד כהה */
+    color: white;
+}
+
+tbody tr:hover {
+    background-color: #f8bbd0; 
+}
