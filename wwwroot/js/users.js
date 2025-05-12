@@ -1,3 +1,13 @@
+const uri = '/user';
+let users = [];
+let token;
+
+if(localStorage.getItem("token") == null){
+    window.location.href = "./login.html";
+}
+else{
+    token = localStorage.getItem("token");
+}
 function getItems() {
     fetch(uri,{
         method: "GET",
@@ -11,16 +21,17 @@ function getItems() {
 }
 
 function addItem() {
+    const addIdTextbox = document.getElementById('add-id');
     const addNameTextbox = document.getElementById('add-name');
     const addPasswordTextbox = document.getElementById('add-password');
     const addEmailTextbox = document.getElementById('add-email');
 
 
     const item = {
+        id: addIdTextbox.value.trim(),
         name: addNameTextbox.value.trim(),
         password: addPasswordTextbox.value.trim(),
         email: addEmailTextbox.value.trim(),
-        id: 0
     };
 
     fetch(uri, {
@@ -35,6 +46,7 @@ function addItem() {
         .then(response => response.json())
         .then(() => {
             getItems();
+            addIdTextbox.value='';
             addNameTextbox.value = '';
             addPasswordTextbox.value = '';
             addEmailTextbox.value = '';
@@ -120,17 +132,21 @@ function _displayItems(data) {
         let tr = tBody.insertRow();
 
         let td1 = tr.insertCell(0);
-        let textName = document.createTextNode(item.name);
-        td1.appendChild(textName);
+        let textId = document.createTextNode(item.id);
+        td1.appendChild(textId);
 
         let td2 = tr.insertCell(1);
-        let textEmail = document.createTextNode(item.email);
-        td2.appendChild(textEmail);
+        let textName = document.createTextNode(item.name);
+        td2.appendChild(textName);
 
-        let td4 = tr.insertCell(2);
+        let td3 = tr.insertCell(2);
+        let textEmail = document.createTextNode(item.email);
+        td3.appendChild(textEmail);
+
+        let td4 = tr.insertCell(3);
         td4.appendChild(editButton);
 
-        let td5 = tr.insertCell(3);
+        let td5 = tr.insertCell(4);
         td5.appendChild(deleteButton);
     });
 

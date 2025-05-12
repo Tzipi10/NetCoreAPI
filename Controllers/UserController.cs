@@ -9,16 +9,13 @@ namespace MyApi.Controllers;
 [Route("[controller]")]
 public class UserController : ControllerBase
 {
-    CurrentUserService currentUser;
+    // CurrentUserService currentUser;
     private IUserService UserService;
     public UserController(IUserService UserService){
         this.UserService = UserService;
 
     }
-    public UserController(CurrentUserService currentUser){
-        this.currentUser = currentUser;
 
-    }
 
     [HttpGet]
     [Authorize(Policy = "Admin")]
@@ -33,8 +30,8 @@ public class UserController : ControllerBase
     public ActionResult<User> Get(int id)
     {
         
-        if(id!=currentUser.UserId && User.FindFirst("type")?.Value != "Admin")
-            return Unauthorized();
+        // if(id!=currentUser.UserId && User.FindFirst("type")?.Value != "Admin")
+        //     return Unauthorized();
         var user = UserService.Get(id);
         if (user == null)
             return NotFound();
@@ -74,14 +71,4 @@ public class UserController : ControllerBase
         return NotFound();
     } 
 
-
-    // [HttpPost("updateUserId")]
-    //     public IActionResult UpdateUserId([FromBody] int userId)
-    //     {
-    //         Console.WriteLine("---------------"+userId);
-    //         Console.WriteLine("---------------"+currentUser.UserId);
-    //         if(currentUser.UpdateUserId(userId))
-    //             return CreatedAtAction(nameof(Post), new { userId});
-    //         return BadRequest();
-    //     }  
 }

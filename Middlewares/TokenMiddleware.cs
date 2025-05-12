@@ -23,20 +23,20 @@ public class TokenMiddleware
             var token = tokenHeader.ToString().Replace("Bearer ", "");
             Console.WriteLine("token in middle: " + token);
 
-            // פענח את הטוקן
             var handler = new JwtSecurityTokenHandler();
             var jwtToken = handler.ReadJwtToken(token);
 
-            // שלוף את המידע מהטוקן (כמו UserId)
-           var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "userId");
-            Console.WriteLine("userId in middle: " + userIdClaim);
+            var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "userId");
+            var type = jwtToken.Claims.FirstOrDefault(c => c.Type == "type").Value;
+            Console.WriteLine("userId in middle: " + userIdClaim + ", type = " + type);
 
             if (userIdClaim != null)
             {
                 var currentUserService = context.RequestServices.GetService<CurrentUserService>();
                 currentUserService.UserId = int.Parse(userIdClaim.Value);
-                Console.WriteLine("currentuser in middle: " + currentUserService);
-                Console.WriteLine("currentuserid in middle: " + currentUserService.UserId);
+                currentUserService.IsAdmin = type == "Admin";
+                //Console.WriteLine("currentuser in middle: " + currentUserService);
+                //Console.WriteLine("currentuserid in middle: " + currentUserService.UserId);
 
             }
         }

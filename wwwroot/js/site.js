@@ -14,28 +14,12 @@ else{
         const usersPageLink=document.getElementById('usersLink');
         usersPageLink.style.display = 'block';
     }
-    console.log("token: "+token);
-    console.log("role: "+role);
+    // console.log("token: "+token);
+    // console.log("role: "+role);
 
-    //updateUserId(123); 
+ 
 }
 
-// async function updateUserId(userId) {
-//     const response = await fetch("/User/updateUserId", {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(userId)
-//     });
-//     let x = await response.json();
-//     console.log(x);
-//     // if (response.ok) {
-//     //     console.log("UserId updated successfully");
-//     // } else {
-//     //     console.error("Failed to update UserId");
-//     // }
-// }
 
 
 

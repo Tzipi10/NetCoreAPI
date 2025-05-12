@@ -80,10 +80,10 @@ Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\Mic
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\57xpf30a7f-s64be4izuz.gz
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\rkym0i5pxx-ick0ubq6s5.gz
-Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\2wlrwvtbjh-o8mewx8cx3.gz
-Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\wtexwk2c07-c5jjeo1kg3.gz
-Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\zpzzhjq3ov-7em5y949ni.gz
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\p4e4wbtxo8-u6npa7ipjv.gz
 Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\ap4rlv6e9l-aw7thy53th.gz
-Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\zonpmqdv09-yzs6ety5jm.gz
-Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\d8zwvov79o-l8z4jhb8os.gz
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\wtexwk2c07-eme6z76jbt.gz
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\2wlrwvtbjh-on2oq2i4zm.gz
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\d8zwvov79o-5o4mjip11u.gz
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\zpzzhjq3ov-rdtd726zl7.gz
+Z:\B\קניג מלכה\core\הפרויקט שהורד\MyApi\obj\Debug\net9.0\compressed\zonpmqdv09-ulm9ipu54j.gz

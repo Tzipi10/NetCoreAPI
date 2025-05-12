@@ -37,6 +37,8 @@ public class GiftServiceJson : IGiftService
     public List<Gift> Get()
     {
         Console.WriteLine(currentUser.UserId);
+        if(currentUser.IsAdmin)
+            return Gifts;
         return Gifts.FindAll(g => g.UserId == currentUser.UserId);
     }
 
@@ -48,7 +50,8 @@ public class GiftServiceJson : IGiftService
     {
         if (newGift == null
             || string.IsNullOrEmpty(newGift.Name)
-            || newGift.Price <= 0)
+            || newGift.Price <= 0
+            || newGift.UserId != currentUser.UserId)
             return -1;
 
         newGift.UserId = currentUser.UserId;
@@ -60,6 +63,7 @@ public class GiftServiceJson : IGiftService
 
     public bool Update(int id, Gift newGift)
     {
+        Console.WriteLine("new gift in service" + newGift);
         if (newGift == null
             || string.IsNullOrEmpty(newGift.Name)
             || newGift.Price <= 0

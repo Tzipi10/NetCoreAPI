@@ -16,7 +16,7 @@ List<User> Users{get;}
 
 private static string fileName = "user.json";
 private string filePath;
-CurrentUserService currentUser;
+//CurrentUserService currentUser;
 public UserServiceJson(IHostEnvironment env)
 {
     filePath = Path.Combine(env.ContentRootPath,"Data",fileName);
@@ -71,6 +71,7 @@ public bool Update(int id, User newUser)
 }
 public bool Delete(int id)
 {
+    //להוסיף מחיקה של כל המוצרים של לקוח זה!!!
     var user = Users.FirstOrDefault(u => u.Id == id);
     if(user == null)
         return false;
@@ -88,9 +89,3 @@ public int ExistUserId(string name,string password){
     return -1;
 }
 }
-
-
-// public static class UserUtilities
-// {
-
-// } 

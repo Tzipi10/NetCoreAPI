@@ -49,6 +49,7 @@ public class GiftController : ControllerBase
 
     public ActionResult Put(int id, Gift newGift)
     {
+        Console.WriteLine("new gift in controller" + newGift);
         if(GiftService.Update(id,newGift))
             return NoContent();
 

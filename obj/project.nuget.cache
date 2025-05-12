@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "fJ6lk1uNqLQ=",
+  "dgSpecHash": "J+SvOuQ+ctD4dItZIQgjfns3UX9DJuSA2Ln8FLjKb2bHg4f4ffyWJcdPQ2UMmWRdVTt5qT0dTgHbORQuxOub/w==",
   "success": true,
   "projectFilePath": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\MyApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\huser\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.4\\microsoft.aspnetcore.authentication.jwtbearer.5.0.4.nupkg.sha512",
-    "C:\\Users\\huser\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.0\\microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
+    "C:\\Users\\huser\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.0\\microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
     "C:\\Users\\huser\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\huser\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\huser\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\2.1.1\\microsoft.extensions.caching.abstractions.2.1.1.nupkg.sha512",
@@ -36,7 +36,7 @@
       "message": "Package 'Microsoft.AspNetCore.Authentication.JwtBearer' 5.0.4 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-q7cg-43mg-qp69",
       "libraryId": "Microsoft.AspNetCore.Authentication.JwtBearer",
       "targetGraphs": [
-        "net9.0"
+        "net8.0"
       ]
     }
   ]
