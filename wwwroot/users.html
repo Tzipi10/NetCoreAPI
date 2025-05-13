@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>users</title>
     <link rel="stylesheet" href="css/site.css" />
+    <!-- <link rel="stylesheet" href="css/users.css" /> -->
 </head>
+
 <body>
     <h1>all users</h1>
-    <button onclick="logout()" id="out">Log Out</button>
-    <a href="./index.html" id="giftsLink">Gifts</a><br>
-
+    <div class="btn">
+        <button onclick="logout()" id="out">Log Out</button>
+        <a href="./index.html" id="giftsLink">Gifts</a><br>
+    </div>
     <div id="form1">
         <!-- <div id="showUser"></div> -->
         <div>
@@ -25,7 +29,7 @@
         </div>
         <div id="editForm" style="display: none;">
             <h3>Edit</h3>
-            <form action="javascript:void(0);" onsubmit="updateItem()" >
+            <form action="javascript:void(0);" onsubmit="updateItem()">
                 <input type="hidden" id="edit-id">
                 <input type="text" id="edit-name">
                 <input type="text" id="edit-password">
@@ -36,7 +40,7 @@
         </div>
     </div>
     <p id="counter"></p>
- 
+
     <table>
         <tr>
             <th>id</th>
@@ -49,8 +53,10 @@
     </table>
 
     <script src="./js/users.js" asp-append-version="true"></script>
+
     <script type="text/javascript">
         getItems();
     </script>
 </body>
+
 </html>

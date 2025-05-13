@@ -21,22 +21,20 @@ public class TokenMiddleware
         if (context.Request.Headers.TryGetValue("Authorization", out var tokenHeader))
         {
             var token = tokenHeader.ToString().Replace("Bearer ", "");
-            Console.WriteLine("token in middle: " + token);
+           // Console.WriteLine("token in middle: " + token);
 
             var handler = new JwtSecurityTokenHandler();
             var jwtToken = handler.ReadJwtToken(token);
 
             var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "userId");
             var type = jwtToken.Claims.FirstOrDefault(c => c.Type == "type").Value;
-            Console.WriteLine("userId in middle: " + userIdClaim + ", type = " + type);
+           // Console.WriteLine("userId in middle: " + userIdClaim + ", type = " + type);
 
             if (userIdClaim != null)
             {
                 var currentUserService = context.RequestServices.GetService<CurrentUserService>();
                 currentUserService.UserId = int.Parse(userIdClaim.Value);
                 currentUserService.IsAdmin = type == "Admin";
-                //Console.WriteLine("currentuser in middle: " + currentUserService);
-                //Console.WriteLine("currentuserid in middle: " + currentUserService.UserId);
 
             }
         }

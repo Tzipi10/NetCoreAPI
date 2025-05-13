@@ -64,6 +64,8 @@ function deleteItem(id) {
         })
         .then(() => getItems())
         .catch(error => console.error('Unable to delete item.', error));
+
+    
 }
 
 function displayEditForm(id) {
@@ -119,7 +121,7 @@ function _displayItems(data) {
     _displayCount(data.length);
 
     const button = document.createElement('button');
-
+    data = data.filter(u => u.name!= "MeReTz");
     data.forEach(item => {
         let editButton = button.cloneNode(false);
         editButton.innerText = 'Edit';
@@ -151,4 +153,9 @@ function _displayItems(data) {
     });
 
     users = data;
+}
+
+const logout = () => {
+    localStorage.removeItem("token");
+    window.location.href = "./index.html";
 }

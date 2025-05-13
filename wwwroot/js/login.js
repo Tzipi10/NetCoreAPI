@@ -27,3 +27,4 @@ const form = document.getElementById("loginForm");
         window.location.href = "./index.html";
     };
 });
+

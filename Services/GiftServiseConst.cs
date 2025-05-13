@@ -2,8 +2,8 @@ using MyApi.Models;
 using MyApi.Interfaces;
 
 namespace MyApi.Services;
-public class GiftServiceConst: IGiftService
-{
+public class GiftServiceConst /*: IGiftService*/
+ {
     private List<Gift> list;
 
     public GiftServiceConst()

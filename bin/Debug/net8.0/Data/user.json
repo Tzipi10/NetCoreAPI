@@ -1,1 +1,44 @@
-[{"Id":1,"Name":"sara","Password":"password123","Email":"sara@example.com"},{"Id":2,"Name":"rivka","Password":"securepass456","Email":"rivka@example.com"},{"Id":123,"Name":"MeReTz","Password":"CLicK","Email":"MeReTz@CLicK"},{"Id":3,"Name":"david","Password":"mypassword321","Email":"david@gmail.com"},{"Id":4,"Name":"yael","Password":"pass1234","Email":"yael@example.com"},{"Id":5,"Name":"noa","Password":"password5678","Email":"noa@gmail.com"},{"Id":124,"Name":"malki","Password":"mal","Email":"malki@gmail.com"}]
+[
+    {
+        "Id": 1,
+        "Name": "sara",
+        "Password": "password123",
+        "Email": "sara@example.com"
+    },
+    {
+        "Id": 2,
+        "Name": "rivka",
+        "Password": "securepass456",
+        "Email": "rivka@example.com"
+    },
+    {
+        "Id": 123,
+        "Name": "MeReTz",
+        "Password": "CLicK",
+        "Email": "MeReTz@CLicK"
+    },
+    {
+        "Id": 3,
+        "Name": "david",
+        "Password": "mypassword321",
+        "Email": "david@gmail.com"
+    },
+    {
+        "Id": 4,
+        "Name": "yael",
+        "Password": "pass1234",
+        "Email": "yael@example.com"
+    },
+    {
+        "Id": 5,
+        "Name": "noa",
+        "Password": "password5678",
+        "Email": "noa@gmail.com"
+    },
+    {
+        "Id": 124,
+        "Name": "malki",
+        "Password": "123123",
+        "Email": "malki@gmail.com"
+    }
+]

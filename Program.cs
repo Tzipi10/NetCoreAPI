@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
 using MyApi.Middlewares;
 using MyApi.Services;
+using Serilog;
+using System.Diagnostics;
 
 //התקנת תעודת אבטחה dotnet dev-certs https --trust
 
@@ -51,6 +53,15 @@ builder.Services.AddSwaggerGen(c =>
                 });
 });
 
+// Configure Serilog
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information() 
+    .WriteTo.Console()
+    .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day) 
+    .CreateLogger();
+
+
+builder.Host.UseSerilog(); // Use Serilog for logging
 var app = builder.Build();
 
 // קביעת המידלוואר לשרת את Swagger כנקודת JSON
@@ -66,7 +77,17 @@ if (app.Environment.IsDevelopment())
 
 }
 
-app.UseMyLog();
+// app.UseMyLog();
+app.Use(async (context, next) =>
+{
+    var sw = new Stopwatch();
+    sw.Start();
+    
+    await next(context);
+
+    sw.Stop();
+    Log.Information("{Path} {Method} took {ElapsedMilliseconds}ms", context.Request.Path, context.Request.Method, sw.ElapsedMilliseconds);
+});
 app.UseMyErrorMiddleware();
 //app.UseHttpsRedirection();
 /*js*/

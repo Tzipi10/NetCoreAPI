@@ -8,20 +8,19 @@
 </head>
 
 <body>
-    <h1>Welcome to gift's world!!!</h1>
-    <div id="btn">
+    <h1><span id="myName"></span>, Welcome to gift's world!!!</h1>
+    <div class="btn">
         <button onclick="logout()" id="out">Log Out</button>
         <a href="./users.html" id="usersLink" style="display: none;">Users</a><br>
+        <button id="editCurrentUser">edit user</button>
     </div>
 
     <div id="form1">
-        <!-- <div id="showUser"></div> -->
         <div>
             <h3>Add new gift</h3>
-
             <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
                 <input type="text" id="add-name" placeholder="name" required>
-                <input type="text" id="add-price" placeholder="price" required>
+                <input type="number" id="add-price" placeholder="price" required>
                 <input type="text" id="add-summary" placeholder="summary" required>
                 <input type="submit" value="Add">
             </form>
@@ -31,7 +30,7 @@
             <form action="javascript:void(0);" onsubmit="updateItem()">
                 <input type="hidden" id="edit-id">
                 <input type="text" id="edit-name">
-                <input type="text" id="edit-price">
+                <input type="number" id="edit-price">
                 <input type="text" id="edit-summary">
                 <input type="submit" value="Save">
                 <a class="close-link" onclick="closeInput()" aria-label="Close">&#10006;</a>
@@ -45,6 +44,7 @@
             <th>Name</th>
             <th>Price</th>
             <th>Summary</th>
+            <th>user name</th>
             <th></th>
             <th></th>
         </tr>

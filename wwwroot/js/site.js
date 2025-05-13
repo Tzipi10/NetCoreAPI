@@ -1,37 +1,33 @@
 const uri = '/gift';
 let gifts = [];
 let token;
+let currentUserId;
 
-if(localStorage.getItem("token") == null){
+if (localStorage.getItem("token") == null) {
     window.location.href = "./login.html";
 }
-else{
+else {
     token = localStorage.getItem("token");
     const payload = JSON.parse(atob(token.split('.')[1]));
-    const role=payload["type"]
-    if(role=="Admin")
-    {
-        const usersPageLink=document.getElementById('usersLink');
+    const role = payload["type"]
+    currentUserId = payload["userId"]
+    console.log(currentUserId+"!!!!!!!!!!!!!!!!!!!!")
+    if (role == "Admin") {
+        const usersPageLink = document.getElementById('usersLink');
         usersPageLink.style.display = 'block';
     }
     // console.log("token: "+token);
     // console.log("role: "+role);
-
- 
 }
 
-
-
-
-
 function getItems() {
-    
-    fetch(uri,{
+    fetch(uri, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
             'Authorization': `Bearer ${token}`
-        }})
+        }
+    })
         .then(response => response.json())
         .then(data => _displayItems(data))
         .catch(error => console.error('Unable to get items.', error));
@@ -51,14 +47,14 @@ function addItem() {
     };
 
     fetch(uri, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
-            },
-            body: JSON.stringify(item)
-        })
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(item)
+    })
         .then(response => response.json())
         .then(() => {
             getItems();
@@ -71,12 +67,12 @@ function addItem() {
 
 function deleteItem(id) {
     fetch(`${uri}/${id}`, {
-            method: 'DELETE',         
-            headers: {
-                "Content-Type": "application/json",
-                'Authorization': `Bearer ${token}`
-            },
-        })
+        method: 'DELETE',
+        headers: {
+            "Content-Type": "application/json",
+            'Authorization': `Bearer ${token}`
+        },
+    })
         .then(() => getItems())
         .catch(error => console.error('Unable to delete item.', error));
 }
@@ -97,24 +93,37 @@ function updateItem() {
         id: parseInt(itemId, 10),
         price: document.getElementById('edit-price').value.trim(),
         name: document.getElementById('edit-name').value.trim(),
-        summary: document.getElementById('edit-summary').value.trim()
+        summary: document.getElementById('edit-summary').value.trim(),
     };
 
     fetch(`${uri}/${itemId}`, {
-            method: 'PUT',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
-            },
-            body: JSON.stringify(item)
-        })
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(item)
+    })
         .then(() => getItems())
         .catch(error => console.error('Unable to update item.', error));
 
     closeInput();
 
     return false;
+}
+
+function getUser(userId) {
+
+    return fetch(`/user/${userId}`, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        }
+    })
+        .then(response => response.json())
 }
 
 function closeInput() {
@@ -131,6 +140,18 @@ function _displayItems(data) {
     const tBody = document.getElementById('gifts');
     tBody.innerHTML = '';
 
+    const myName = document.getElementById('myName');
+    getUser(currentUserId).then(user => {
+        
+        myName.innerHTML = user.name
+    });
+
+    const editUserButton = document.getElementById('editCurrentUser');
+    // editUserButton.setAttribute('onclick', `displayEditForm(${currentUserId})`);
+    editUserButton.addEventListener('click', () => {
+        displayEditForm(currentUserId);
+    });
+    
     _displayCount(data.length);
 
     const button = document.createElement('button');
@@ -158,17 +179,24 @@ function _displayItems(data) {
         let textsum = document.createTextNode(item.summary);
         td3.appendChild(textsum);
 
-        let td4 = tr.insertCell(3);
-        td4.appendChild(editButton);
+        getUser(item.userId).then(user => {
+            let td6 = tr.insertCell(3);
+            let textuserName
+            textuserName = document.createTextNode(user.name)
+            td6.appendChild(textuserName);
 
-        let td5 = tr.insertCell(4);
-        td5.appendChild(deleteButton);
+            let td4 = tr.insertCell(4);
+            td4.appendChild(editButton);
+
+            let td5 = tr.insertCell(5);
+            td5.appendChild(deleteButton);
+        });
     });
 
     gifts = data;
 }
 
-const logout=()=>{
+const logout = () => {
     localStorage.removeItem("token");
-    window.location.href="./index.html";
+    window.location.href = "./index.html";
 }

@@ -9,10 +9,13 @@ namespace MyApi.Controllers;
 [Route("[controller]")]
 public class UserController : ControllerBase
 {
-    // CurrentUserService currentUser;
     private IUserService UserService;
-    public UserController(IUserService UserService){
+
+    //to delete user items in delete user
+    private IGiftService GiftService;
+    public UserController(IUserService UserService, IGiftService GiftService){
         this.UserService = UserService;
+        this.GiftService = GiftService;
 
     }
 
@@ -65,7 +68,10 @@ public class UserController : ControllerBase
 
     public ActionResult Delete(int id)
     {
-        if (UserService.Delete(id))
+        if (GiftService.DeleteUserItems(id))
+            return Ok();
+
+        if(UserService.Delete(id))
             return Ok();
             
         return NotFound();

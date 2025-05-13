@@ -31,7 +31,7 @@ form {
 }
 
 /* Input fields styling */
-input[type="text"],input[type="email"],input[type="password"] {
+input {
     width: calc(100% - 20px);
     padding: 10px;
     margin: 10px 0;
@@ -40,7 +40,7 @@ input[type="text"],input[type="email"],input[type="password"] {
 }
 
 /* Submit button styling */
-input[type="submit"] ,#out ,#usersLink, #giftsLink,button{
+input[type="submit"] ,#usersLink, #giftsLink,button{
     background-color: #ea5a7e; /* צבע כפתור ורוד כהה */
     color: white;
     padding: 10px;
@@ -49,7 +49,8 @@ input[type="submit"] ,#out ,#usersLink, #giftsLink,button{
     cursor: pointer;
 }
 
-input[type="submit"]:hover,#out,#usersLink ,#giftsLink ,button{
+
+input[type="submit"]:hover,#usersLink ,#giftsLink ,button{
     background-color: #e84870; /* צבע כפתור ורוד כהה יותר בהעברה */
 }
 
@@ -115,11 +116,25 @@ h3 {
     width: 120px;
 }
 
-#usersLink,#giftsLink{
+#usersLink,#giftsLink,#out{
     margin-top: 20px;
     text-decoration-line: none;
 }
 
-#btn{
+.btn{
     display: flex;
+    flex-grow: 30px;
+}
+
+#out{
+    /* padding:0px !important; */
+    margin-right: 30px;
+}
+
+#myName{
+    color: #d2316c;
+}
+
+#editCurrentUser{
+    height: 30px;
 }

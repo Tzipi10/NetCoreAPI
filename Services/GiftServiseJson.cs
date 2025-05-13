@@ -48,10 +48,10 @@ public class GiftServiceJson : IGiftService
     }
     public int Insert(Gift newGift)
     {
+        Console.WriteLine("in insert, "+newGift.Price, ", " + newGift.Name);
         if (newGift == null
             || string.IsNullOrEmpty(newGift.Name)
-            || newGift.Price <= 0
-            || newGift.UserId != currentUser.UserId)
+            || newGift.Price <= 0)
             return -1;
 
         newGift.UserId = currentUser.UserId;
@@ -63,15 +63,15 @@ public class GiftServiceJson : IGiftService
 
     public bool Update(int id, Gift newGift)
     {
-        Console.WriteLine("new gift in service" + newGift);
         if (newGift == null
             || string.IsNullOrEmpty(newGift.Name)
             || newGift.Price <= 0
-            || newGift.Id != id
-            || newGift.UserId != currentUser.UserId)
+            || newGift.Id != id)
             return false;
 
         var gift = Gifts.FirstOrDefault(g => g.Id == id);
+        if(gift.UserId !=currentUser.UserId && !currentUser.IsAdmin)
+            return false;
         gift.Name = newGift.Name;
         gift.Price = newGift.Price;
         gift.Summary = newGift.Summary;
@@ -80,17 +80,30 @@ public class GiftServiceJson : IGiftService
     }
     public bool Delete(int id)
     {
-        var gift = Gifts.FirstOrDefault(g => g.Id == id && g.UserId == currentUser.UserId);
-        if (gift == null)
+        var gift = Gifts.FirstOrDefault(g => g.Id == id);
+        if (gift == null || (gift.UserId != currentUser.UserId && !currentUser.IsAdmin))
             return false;
 
         Gifts.RemoveAt(Gifts.IndexOf(gift));
         savaToFile();
         return true;
     }
+
+    public bool DeleteUserItems(int userId)
+    {
+        // Gifts.ForEach(gift => {
+        //     if(gift.UserId == userId)
+        //         Delete(gift.Id);
+        // });
+
+        foreach (Gift gift in Gifts)
+        {
+            if (gift.UserId == userId)
+                if(!Delete(gift.Id))
+                    return false;
+        }
+
+        return true;
+    }
 }
 
-// public static class GiftUtilities
-// {
-    
-// }
