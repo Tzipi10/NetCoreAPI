@@ -46,10 +46,10 @@ public class UserController : ControllerBase
 
     public ActionResult Post(User newUser)
     {
-        var newId = UserService.Insert(newUser);
-        if (newId == -1)
+        var userId = UserService.Insert(newUser);
+        if (userId == -1)
             return BadRequest();
-        return CreatedAtAction(nameof(Post), new { Id= newId});
+        return CreatedAtAction(nameof(Post), new { Id= userId});
     }
 
     [HttpPut("{id}")]
@@ -68,8 +68,7 @@ public class UserController : ControllerBase
 
     public ActionResult Delete(int id)
     {
-        if (GiftService.DeleteUserItems(id))
-            return Ok();
+        GiftService.DeleteUserItems(id);
 
         if(UserService.Delete(id))
             return Ok();

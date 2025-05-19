@@ -5,6 +5,6 @@ namespace MyApi.Interfaces
 {
     public interface IGiftService : IService<Gift>
     {
-        bool DeleteUserItems(int userId);
+        void DeleteUserItems(int userId);
     }
 }

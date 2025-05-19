@@ -11,8 +11,7 @@ using Microsoft.Extensions.Hosting;
 namespace MyApi.Services;
 public class GiftServiceJson : IGiftService
 {
-    // private List<Gift> list;
-    List<Gift> Gifts { get; }
+    List<Gift> Gifts { get;}
     CurrentUserService currentUser;
     private static string fileName = "gift.json";
     private string filePath;
@@ -89,21 +88,13 @@ public class GiftServiceJson : IGiftService
         return true;
     }
 
-    public bool DeleteUserItems(int userId)
+    public void DeleteUserItems(int userId)
     {
-        // Gifts.ForEach(gift => {
-        //     if(gift.UserId == userId)
-        //         Delete(gift.Id);
-        // });
 
-        foreach (Gift gift in Gifts)
-        {
-            if (gift.UserId == userId)
-                if(!Delete(gift.Id))
-                    return false;
-        }
-
-        return true;
+        Gifts.RemoveAll(g => g.UserId == userId);
+        
+        savaToFile();
+         
     }
 }
 

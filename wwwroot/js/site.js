@@ -3,6 +3,7 @@ let gifts = [];
 let token;
 let currentUserId;
 
+//document.addEventListener("DOMContentLoaded", () => {
 if (localStorage.getItem("token") == null) {
     window.location.href = "./login.html";
 }
@@ -11,7 +12,7 @@ else {
     const payload = JSON.parse(atob(token.split('.')[1]));
     const role = payload["type"]
     currentUserId = payload["userId"]
-    console.log(currentUserId+"!!!!!!!!!!!!!!!!!!!!")
+    console.log(currentUserId + "!!!!!!!!!!!!!!!!!!!!")
     if (role == "Admin") {
         const usersPageLink = document.getElementById('usersLink');
         usersPageLink.style.display = 'block';
@@ -19,7 +20,7 @@ else {
     // console.log("token: "+token);
     // console.log("role: "+role);
 }
-
+//});
 function getItems() {
     fetch(uri, {
         method: "GET",
@@ -38,7 +39,6 @@ function addItem() {
     const addPriceTextbox = document.getElementById('add-price');
     const addSummaryTextbox = document.getElementById('add-summary');
 
-
     const item = {
         name: addNameTextbox.value.trim(),
         price: addPriceTextbox.value.trim(),
@@ -55,7 +55,23 @@ function addItem() {
         },
         body: JSON.stringify(item)
     })
-        .then(response => response.json())
+        .then(response => {
+            const divAddItem = document.getElementById("divAddItem");
+            if (response.status == 400) {
+                if (divAddItem.lastChild.tagName != "P") {
+                    let pError = document.createElement("p");
+                    pError.innerHTML = 'invalid item'
+                    pError.style = "color: red;";
+                    divAddItem.appendChild(pError);
+                }
+            }
+            else {
+                if (divAddItem.lastChild.tagName == "P")
+                    divAddItem.lastChild.remove()
+                response.json()
+            }
+
+        })
         .then(() => {
             getItems();
             addNameTextbox.value = '';
@@ -105,10 +121,25 @@ function updateItem() {
         },
         body: JSON.stringify(item)
     })
-        .then(() => getItems())
+        .then((response) => {
+            const diveditForm = document.getElementById("editForm");
+            if (response.status == 400) {
+                if (diveditForm.lastChild.tagName != "P") {
+                    let pError = document.createElement("p");
+                    pError.innerHTML = 'invalid item'
+                    pError.style = "color: red;";
+                    diveditForm.appendChild(pError);
+                }
+            }
+            else {
+                getItems()
+                closeInput();
+            }
+
+        })
         .catch(error => console.error('Unable to update item.', error));
 
-    closeInput();
+
 
     return false;
 }
@@ -142,7 +173,7 @@ function _displayItems(data) {
 
     const myName = document.getElementById('myName');
     getUser(currentUserId).then(user => {
-        
+
         myName.innerHTML = user.name
     });
 
@@ -151,7 +182,7 @@ function _displayItems(data) {
     editUserButton.addEventListener('click', () => {
         displayEditForm(currentUserId);
     });
-    
+
     _displayCount(data.length);
 
     const button = document.createElement('button');

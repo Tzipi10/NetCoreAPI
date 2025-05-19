@@ -4,7 +4,7 @@ public static class ServiceCollection
 {
     public static void AddCurrentUser(this IServiceCollection services)
     {
-        services.AddSingleton<CurrentUserService>(); // הפוך ל-Singleton
+        services.AddSingleton<CurrentUserService>();
     }
 
     public static void AddGiftJson(this IServiceCollection services)

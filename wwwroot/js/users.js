@@ -2,19 +2,20 @@ const uri = '/user';
 let users = [];
 let token;
 
-if(localStorage.getItem("token") == null){
+if (localStorage.getItem("token") == null) {
     window.location.href = "./login.html";
 }
-else{
+else {
     token = localStorage.getItem("token");
 }
 function getItems() {
-    fetch(uri,{
+    fetch(uri, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
             'Authorization': `Bearer ${token}`
-        }})
+        }
+    })
         .then(response => response.json())
         .then(data => _displayItems(data))
         .catch(error => console.error('Unable to get items.', error));
@@ -35,18 +36,34 @@ function addItem() {
     };
 
     fetch(uri, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
-            },
-            body: JSON.stringify(item)
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(item)
+    })
+        .then(response => {
+            const divAddItem = document.getElementById("divAddUser");
+            if (response.status == 400) {
+                if (divAddItem.lastChild.tagName != "P") {
+                    let pError = document.createElement("p");
+                    pError.innerHTML = 'invalid user';
+                    pError.style = "color: red;";
+                    divAddItem.appendChild(pError);
+                }
+
+            }
+            else {
+                if (divAddItem.lastChild.tagName == "P")
+                    divAddItem.lastChild.remove();
+                response.json();
+            }
         })
-        .then(response => response.json())
         .then(() => {
             getItems();
-            addIdTextbox.value='';
+            addIdTextbox.value = '';
             addNameTextbox.value = '';
             addPasswordTextbox.value = '';
             addEmailTextbox.value = '';
@@ -56,16 +73,16 @@ function addItem() {
 
 function deleteItem(id) {
     fetch(`${uri}/${id}`, {
-            method: 'DELETE',         
-            headers: {
-                "Content-Type": "application/json",
-                'Authorization': `Bearer ${token}`
-            },
-        })
+        method: 'DELETE',
+        headers: {
+            "Content-Type": "application/json",
+            'Authorization': `Bearer ${token}`
+        },
+    })
         .then(() => getItems())
         .catch(error => console.error('Unable to delete item.', error));
 
-    
+
 }
 
 function displayEditForm(id) {
@@ -88,18 +105,34 @@ function updateItem() {
     };
 
     fetch(`${uri}/${itemId}`, {
-            method: 'PUT',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
-            },
-            body: JSON.stringify(item)
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(item)
+    })
+        .then((response) => {
+            const diveditForm = document.getElementById("editForm");
+            if (response.status == 400) {
+                if (diveditForm.lastChild.tagName != "P") {
+                    let pError = document.createElement("p");
+                    pError.innerHTML = 'invalid item'
+                    pError.style = "color: red;";
+                    diveditForm.appendChild(pError);
+                }
+
+            }
+            else {
+                getItems();
+                closeInput();
+            }
+
         })
-        .then(() => getItems())
         .catch(error => console.error('Unable to update item.', error));
 
-    closeInput();
+
 
     return false;
 }
@@ -118,10 +151,11 @@ function _displayItems(data) {
     const tBody = document.getElementById('users');
     tBody.innerHTML = '';
 
+    data = data.filter(u => u.name != "MeReTz");
     _displayCount(data.length);
 
     const button = document.createElement('button');
-    data = data.filter(u => u.name!= "MeReTz");
+
     data.forEach(item => {
         let editButton = button.cloneNode(false);
         editButton.innerText = 'Edit';

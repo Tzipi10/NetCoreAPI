@@ -11,7 +11,7 @@ using Microsoft.Extensions.Hosting;
 namespace MyApi.Services;
 public class UserServiceJson: IUserService
 {
-// private List<User> list;
+
 List<User> Users{get;}
 
 private static string fileName = "user.json";
@@ -47,10 +47,10 @@ public int Insert(User newUser)
 {
     if(newUser == null 
         || string.IsNullOrEmpty(newUser.Name)
-        || string.IsNullOrEmpty(newUser.Password))
+        || string.IsNullOrEmpty(newUser.Password)
+        || Users.Any(u => u.Id == newUser.Id))
         return -1;
     
-    newUser.Id = Users.Max(u => u.Id) +1;
     Users.Add(newUser);
     savaToFile();
     return newUser.Id;
@@ -61,6 +61,7 @@ public bool Update(int id, User newUser)
     if(newUser == null 
         || string.IsNullOrEmpty(newUser.Name)
         || string.IsNullOrEmpty(newUser.Password)
+        || string.IsNullOrEmpty(newUser.Email)
         || newUser.Id != id)
         return false;
     

@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\MyApi.csproj": {}
+    "C:\\Users\\user1\\Desktop\\תכנות\\core\\MyApi\\MyApi.csproj": {}
   },
   "projects": {
-    "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\MyApi.csproj": {
+    "C:\\Users\\user1\\Desktop\\תכנות\\core\\MyApi\\MyApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\MyApi.csproj",
+        "projectUniqueName": "C:\\Users\\user1\\Desktop\\תכנות\\core\\MyApi\\MyApi.csproj",
         "projectName": "MyApi",
-        "projectPath": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\MyApi.csproj",
-        "packagesPath": "C:\\Users\\huser\\.nuget\\packages\\",
-        "outputPath": "Z:\\B\\קניג מלכה\\core\\הפרויקט שהורד\\MyApi\\obj\\",
+        "projectPath": "C:\\Users\\user1\\Desktop\\תכנות\\core\\MyApi\\MyApi.csproj",
+        "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user1\\Desktop\\תכנות\\core\\MyApi\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\huser\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -40,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -98,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

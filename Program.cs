@@ -7,6 +7,8 @@ using System.Diagnostics;
 
 //התקנת תעודת אבטחה dotnet dev-certs https --trust
 
+//? לעשות שלמנהל יהיה אופציה להוסיף מתנה למשתמש כלשהו (ע"י בחירת השם/תז שלו)
+
 var builder = WebApplication.CreateBuilder(args);
 
 // הוספת שירותי ה-Controllers
