@@ -2191,11 +2191,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user1\\Desktop\\תכנות\\core\\MyApi\\MyApi.csproj",
+      "projectUniqueName": "C:\\Users\\user1\\Desktop\\תכנות\\יד - שנה ב\\core\\MyApi\\MyApi.csproj",
       "projectName": "MyApi",
-      "projectPath": "C:\\Users\\user1\\Desktop\\תכנות\\core\\MyApi\\MyApi.csproj",
+      "projectPath": "C:\\Users\\user1\\Desktop\\תכנות\\יד - שנה ב\\core\\MyApi\\MyApi.csproj",
       "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user1\\Desktop\\תכנות\\core\\MyApi\\obj\\",
+      "outputPath": "C:\\Users\\user1\\Desktop\\תכנות\\יד - שנה ב\\core\\MyApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2281,7 +2281,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.410/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

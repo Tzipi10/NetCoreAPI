@@ -1,26 +1,32 @@
 const uri = '/gift';
 let gifts = [];
 let token;
-let currentUserId;
+let currentUser;
 
-//document.addEventListener("DOMContentLoaded", () => {
-if (localStorage.getItem("token") == null) {
-    window.location.href = "./login.html";
-}
-else {
-    token = localStorage.getItem("token");
-    const payload = JSON.parse(atob(token.split('.')[1]));
-    const role = payload["type"]
-    currentUserId = payload["userId"]
-    console.log(currentUserId + "!!!!!!!!!!!!!!!!!!!!")
-    if (role == "Admin") {
-        const usersPageLink = document.getElementById('usersLink');
-        usersPageLink.style.display = 'block';
+const init = () => {
+    if (localStorage.getItem("token") == null) {
+        window.location.href = "./login.html";
     }
-    // console.log("token: "+token);
-    // console.log("role: "+role);
+    else {
+        token = localStorage.getItem("token");
+        const payload = JSON.parse(atob(token.split('.')[1]));
+        
+        const currentUserId = payload["userId"];
+        const role = payload["type"];
+        if (role == "Admin") {
+            const usersPageLink = document.getElementById('usersLink');
+            usersPageLink.style.display = 'block';
+        }
+
+        const myName = document.getElementById('myName');
+        getUser(currentUserId).then(user => {
+            currentUser = user;
+            myName.innerHTML = role == "Admin"? `${user.name} - Admin` : user.name;        
+        });
+    }
 }
-//});
+
+
 function getItems() {
     fetch(uri, {
         method: "GET",
@@ -67,16 +73,12 @@ function addItem() {
             }
             else {
                 if (divAddItem.lastChild.tagName == "P")
-                    divAddItem.lastChild.remove()
-                response.json()
+                    divAddItem.lastChild.remove();
+                getItems();
+                addNameTextbox.value = '';
+                addPriceTextbox.value = '';
+                addSummaryTextbox.value = '';
             }
-
-        })
-        .then(() => {
-            getItems();
-            addNameTextbox.value = '';
-            addPriceTextbox.value = '';
-            addSummaryTextbox.value = '';
         })
         .catch(error => console.error('Unable to add item.', error));
 }
@@ -97,14 +99,16 @@ function displayEditForm(id) {
     const item = gifts.find(item => item.id === id);
 
     document.getElementById('edit-name').value = item.name;
-    document.getElementById('edit-id').value = item.id;
+    document.getElementById('edit-id').innerHTML = item.id;
     document.getElementById('edit-price').value = item.price;
     document.getElementById('edit-summary').value = item.summary;
     document.getElementById('editForm').style.display = 'block';
+
+    window.location.href = "#editForm";
 }
 
 function updateItem() {
-    const itemId = document.getElementById('edit-id').value;
+    const itemId = document.getElementById('edit-id').innerHTML;
     const item = {
         id: parseInt(itemId, 10),
         price: document.getElementById('edit-price').value.trim(),
@@ -158,7 +162,10 @@ function getUser(userId) {
 }
 
 function closeInput() {
-    document.getElementById('editForm').style.display = 'none';
+    let diveditForm = document.getElementById('editForm');
+    if (diveditForm.lastChild.tagName == "P")
+        diveditForm.lastChild.remove();
+    diveditForm.style.display = 'none';
 }
 
 function _displayCount(itemCount) {
@@ -170,18 +177,6 @@ function _displayCount(itemCount) {
 function _displayItems(data) {
     const tBody = document.getElementById('gifts');
     tBody.innerHTML = '';
-
-    const myName = document.getElementById('myName');
-    getUser(currentUserId).then(user => {
-
-        myName.innerHTML = user.name
-    });
-
-    const editUserButton = document.getElementById('editCurrentUser');
-    // editUserButton.setAttribute('onclick', `displayEditForm(${currentUserId})`);
-    editUserButton.addEventListener('click', () => {
-        displayEditForm(currentUserId);
-    });
 
     _displayCount(data.length);
 
@@ -198,28 +193,32 @@ function _displayItems(data) {
 
         let tr = tBody.insertRow();
 
-        let td1 = tr.insertCell(0);
+        let td7 = tr.insertCell(0);
+        let textId = document.createTextNode(item.id);
+        td7.appendChild(textId);
+
+        let td1 = tr.insertCell(1);
         let textName = document.createTextNode(item.name);
         td1.appendChild(textName);
 
-        let td2 = tr.insertCell(1);
+        let td2 = tr.insertCell(2);
         let textPrice = document.createTextNode(item.price);
         td2.appendChild(textPrice);
 
-        let td3 = tr.insertCell(2);
+        let td3 = tr.insertCell(3);
         let textsum = document.createTextNode(item.summary);
         td3.appendChild(textsum);
 
         getUser(item.userId).then(user => {
-            let td6 = tr.insertCell(3);
+            let td6 = tr.insertCell(4);
             let textuserName
             textuserName = document.createTextNode(user.name)
             td6.appendChild(textuserName);
 
-            let td4 = tr.insertCell(4);
+            let td4 = tr.insertCell(5);
             td4.appendChild(editButton);
 
-            let td5 = tr.insertCell(5);
+            let td5 = tr.insertCell(6);
             td5.appendChild(deleteButton);
         });
     });
@@ -227,7 +226,51 @@ function _displayItems(data) {
     gifts = data;
 }
 
+const editMyUser = () => {
+    document.getElementById('edit-user-name').value = currentUser.name;
+    document.getElementById('edit-user-id').innerHTML = currentUser.id;
+    document.getElementById('edit-password').value = currentUser.password;
+    document.getElementById('edit-email').value = currentUser.email;
+    document.getElementById('editUser').style.display = 'block';
+}
+
+const updateUser = () => {
+    currentUser.name = document.getElementById('edit-user-name').value.trim();
+    currentUser.password = document.getElementById('edit-password').value.trim();
+    currentUser.email = document.getElementById('edit-email').value.trim();
+
+    fetch(`/user/${currentUser.id}`, {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify(currentUser)
+    })
+        .then((response) => {
+            const divedituser = document.getElementById("editUser");
+            if (response.status == 400) {
+                if (divedituser.lastChild.tagName != "P") {
+                    let pError = document.createElement("p");
+                    pError.innerHTML = 'invalid user'
+                    pError.style = "color: red;";
+                    divedituser.appendChild(pError);
+                }
+            }
+            else
+                closeEditUser();
+        })
+        .catch(error => console.error('Unable to update item.', error));
+
+    return false;
+}
+
+const closeEditUser = () => {
+    document.getElementById('editUser').style.display = 'none';
+}
+
 const logout = () => {
     localStorage.removeItem("token");
-    window.location.href = "./index.html";
+    window.location.href = "./login.html";
 }

@@ -12,9 +12,20 @@
     <div class="btn">
         <button onclick="logout()" id="out">Log Out</button>
         <a href="./users.html" id="usersLink" style="display: none;">Users</a><br>
-        <button id="editCurrentUser">edit user</button>
+        <button onclick="editMyUser()">Edit Your Details</button>
     </div>
 
+    <div id="editUser" style="display: none;">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateUser()">
+            <p >id: <span id="edit-user-id"></span></p>
+            <input type="text" id="edit-user-name" required>
+            <input type="text" id="edit-password" required>
+            <input type="email" id="edit-email" required>
+            <input type="submit" value="Save">
+            <a class="close-link" onclick="closeEditUser()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
     <div id="form1">
         <div id="divAddItem">
             <h3>Add new gift</h3>
@@ -28,10 +39,10 @@
         <div id="editForm" style="display: none;">
             <h3>Edit</h3>
             <form action="javascript:void(0);" onsubmit="updateItem()">
-                <input type="hidden" id="edit-id">
-                <input type="text" id="edit-name">
-                <input type="number" id="edit-price">
-                <input type="text" id="edit-summary">
+                <p >id: <span id="edit-id"></span></p>
+                <input type="text" id="edit-name" required>
+                <input type="number" id="edit-price" required>
+                <input type="text" id="edit-summary" required>
                 <input type="submit" value="Save">
                 <a class="close-link" onclick="closeInput()" aria-label="Close">&#10006;</a>
             </form>
@@ -41,6 +52,7 @@
 
     <table>
         <tr>
+            <th>Id</th>
             <th>Name</th>
             <th>Price</th>
             <th>Summary</th>
@@ -53,6 +65,7 @@
 
     <script src="js/site.js" asp-append-version="true"></script>
     <script type="text/javascript">
+        init();
         getItems();
     </script>
 </body>

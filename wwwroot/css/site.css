@@ -112,29 +112,23 @@ h3 {
     gap: 5%;
 }
 
-#out,button{
-    width: 120px;
+table button{
+    width: 100px;
 }
 
-#usersLink,#giftsLink,#out{
-    margin-top: 20px;
+#usersLink, #giftsLink, .btn button{
     text-decoration-line: none;
+    margin-inline: 5px;
+    padding-inline: 15px;
 }
 
 .btn{
+    padding-top: 20px;
     display: flex;
     flex-grow: 30px;
-}
-
-#out{
-    /* padding:0px !important; */
-    margin-right: 30px;
+    
 }
 
 #myName{
     color: #d2316c;
-}
-
-#editCurrentUser{
-    height: 30px;
 }

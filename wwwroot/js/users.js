@@ -53,20 +53,16 @@ function addItem() {
                     pError.style = "color: red;";
                     divAddItem.appendChild(pError);
                 }
-
             }
             else {
                 if (divAddItem.lastChild.tagName == "P")
                     divAddItem.lastChild.remove();
-                response.json();
+                addIdTextbox.value = '';
+                addNameTextbox.value = '';
+                addPasswordTextbox.value = '';
+                addEmailTextbox.value = '';
+                getItems();
             }
-        })
-        .then(() => {
-            getItems();
-            addIdTextbox.value = '';
-            addNameTextbox.value = '';
-            addPasswordTextbox.value = '';
-            addEmailTextbox.value = '';
         })
         .catch(error => console.error('Unable to add item.', error));
 }
@@ -82,21 +78,22 @@ function deleteItem(id) {
         .then(() => getItems())
         .catch(error => console.error('Unable to delete item.', error));
 
-
 }
 
 function displayEditForm(id) {
     const item = users.find(item => item.id === id);
 
     document.getElementById('edit-name').value = item.name;
-    document.getElementById('edit-id').value = item.id;
+    document.getElementById('edit-id').innerHTML = id;
     document.getElementById('edit-password').value = item.password;
     document.getElementById('edit-email').value = item.email;
     document.getElementById('editForm').style.display = 'block';
+
+    location.href = "#editForm";
 }
 
 function updateItem() {
-    const itemId = document.getElementById('edit-id').value;
+    const itemId = document.getElementById('edit-id').innerHTML;
     const item = {
         id: parseInt(itemId, 10),
         name: document.getElementById('edit-name').value.trim(),
@@ -118,11 +115,10 @@ function updateItem() {
             if (response.status == 400) {
                 if (diveditForm.lastChild.tagName != "P") {
                     let pError = document.createElement("p");
-                    pError.innerHTML = 'invalid item'
+                    pError.innerHTML = 'invalid user'
                     pError.style = "color: red;";
                     diveditForm.appendChild(pError);
                 }
-
             }
             else {
                 getItems();
@@ -131,14 +127,13 @@ function updateItem() {
 
         })
         .catch(error => console.error('Unable to update item.', error));
-
-
-
-    return false;
 }
 
 function closeInput() {
-    document.getElementById('editForm').style.display = 'none';
+    let diveditForm = document.getElementById('editForm');
+    diveditForm.style.display = 'none';
+    if (diveditForm.lastChild.tagName == "P")
+        diveditForm.lastChild.remove();
 }
 
 function _displayCount(itemCount) {
@@ -189,7 +184,7 @@ function _displayItems(data) {
     users = data;
 }
 
-const logout = () => {
-    localStorage.removeItem("token");
-    window.location.href = "./index.html";
-}
+// const logout = () => {
+//     localStorage.removeItem("token");
+//     window.location.href = "./index.html";
+// }
